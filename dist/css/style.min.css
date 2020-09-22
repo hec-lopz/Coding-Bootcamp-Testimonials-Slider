@@ -1,0 +1,1 @@
+:root{--desktop-width:1440px;--mobile-width:375px;--dark-blue:hsl(240, 38%, 20%);--grayish-blue:hsl(240, 18%, 77%);--font-size:32px;--main-font:'Inter',sans-serif;--thin:300;--normal:500;--bold:700}html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}body,figure,html{margin:0;padding:0}body{height:100vh;width:100vw}
