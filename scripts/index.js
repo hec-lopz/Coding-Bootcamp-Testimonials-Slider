@@ -55,13 +55,10 @@ const togglePerson = (math) => {
     let person;
     if( math(id) > testimonials.length) {
         id = 1;
-        console.log("if: ",id);
     } else if(math === subtract1 && id === 1) {
         id = testimonials.length;
-        console.log("else if: ",id);
     } else {
         id = math(id);
-        console.log("else: ", id);
     }
     person = findPerson(testimonials, id);
     person[0].printData();
@@ -72,3 +69,10 @@ const findPerson = (arr, id) => arr.filter(person => Object.values(person).inclu
 
 left_btn.addEventListener('click', () => togglePerson(subtract1))
 right_btn.addEventListener('click', () => togglePerson(add1))
+document.addEventListener('keydown', (e) => {
+    if(e.code === "ArrowLeft"){
+        togglePerson(subtract1)
+    } else if (e.code === "ArrowRight"){
+        togglePerson(add1);
+    }
+})
