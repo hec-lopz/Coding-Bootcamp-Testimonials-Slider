@@ -29,6 +29,9 @@
     --quotes: url("../images/pattern-quotes.svg");
     --background: url("../images/pattern-bg.svg");
     --curve: url("../images/pattern-curve.svg");
+    --left-arrow: url("../images/icon-prev.svg");
+    --right-arrow: url("../images/icon-next.svg");
+
 
 }
 
@@ -74,6 +77,9 @@ body{
     background-repeat: no-repeat;
     height: 325px;
     padding: var(--container-padding);
+    position: relative;
+    z-index: 0;
+    
 }
 
 /************** Image */
@@ -83,12 +89,50 @@ body{
     max-width: 275px;
     width: 85%;
     margin: 15px auto 0;
-    overflow: hidden;
+    /* overflow: hidden; */
+
 }
 .slider__fig-container img{
     width: 100%;
     height: 100%;
     object-fit: contain;
+    box-shadow: 9px 9px 90px -39px rgba(0,0,0,0.75);
+    border-radius: inherit;
+
+
+}
+/************** buttons */
+.slider-buttons{
+    display: flex;
+    overflow: hidden;
+    width: 70px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 9px 9px 90px -39px rgba(0,0,0,0.75);
+
+}
+.left-arrow, .right-arrow{
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+}
+.left-arrow:hover, .right-arrow:hover{
+    background-color: #F1F5F0;
+}
+.left-arrow:active{
+    background: linear-gradient(90deg, rgba(228,232,227,1) 16%, rgba(255,255,255,1) 90%);
+}
+.right-arrow:active{
+    background: linear-gradient(270deg, rgba(228,232,227,1) 16%, rgba(255,255,255,1) 90%)
 }
 
 /************** Text */
@@ -106,6 +150,8 @@ body{
     font-weight: var(--thin);
     text-align: center;
     line-height: 1.3em;
+    z-index: 1;
+    position: relative;
     /* font-size: var(--font-size); */
 }
 .slider__text-container > p::before, p::after{
@@ -127,7 +173,7 @@ body{
     align-items: center;
     margin: 0 auto;
     font-size: 1.5em;
-    width: 120px;
+    width: 100%;
 
 
 }

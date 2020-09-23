@@ -13,7 +13,7 @@ module.exports = function(grunt) {
             },
             uglify: {
                 files: ['src/**/*.js'],
-                tasks: ['uglify']
+                tasks: ['']
             }
         },
         cssmin: {

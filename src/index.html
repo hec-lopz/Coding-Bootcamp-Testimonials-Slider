@@ -10,32 +10,29 @@
     <title>Coding Bootcamp Testimonials Slider</title>
   </head>
   <body>
-    <section class="slider" data-testimonial="1">
+    <section class="slider" data-id="1">
       <div class="slider__fig-container">
         <figure>
-          <img src="./images/image-tanya.jpg" alt="picture">
+          <img id="picture" src="./images/image-tanya.jpg" alt="picture">
         </figure>
-        <div class="slider-buttons"></div>
+        <div class="slider-buttons">
+          <i class="left-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="18"><path fill="none" stroke="#8585AC" stroke-width="3" d="M11 1L3 9l8 8"/></svg></i>
+          <i class="right-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="18"><path fill="none" stroke="#8585AC" stroke-width="3" d="M2 1l8 8-8 8"/></svg></i>
+        </div>
       </div>
       <div class="slider__text-container"  >
-        <p class="slider__quote">
+        <p id="quote" class="slider__quote">
           I’ve been interested in coding for a while but never taken the jump, until
           now. I couldn’t recommend this course enough. I’m now in the job of my
           dreams and so excited about the future.
         </p>
         <div class="slider__name-label">
-          <b>Tanya Sinclair</b>
-          <span>UX Engineer</span>
+          <b id="name">Tanya Sinclair</b>
+          <span id="position">UX Engineer</span>
         </div>
 
       </div>
     </section>
-    <!--     
-    “ If
-    you want to lay the best foundation possible I’d recommend taking this
-    course. The depth the instructors go into is incredible. I now feel so
-    confident about starting up as a professional developer. ” John Tarkpor
-    Junior Front-end Developer
-    -->
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

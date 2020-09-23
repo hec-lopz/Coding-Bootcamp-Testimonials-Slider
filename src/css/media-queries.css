@@ -92,9 +92,17 @@
     .slider__name-label{
         margin-left: 100px;
     }
-
-
-
-
+    
 }
 
+@media screen and (min-width:1320px) {
+    .slider-buttons{
+        width: 100px;
+        height: 50px;
+        left: 25%;
+    }
+    .left-arrow, .right-arrow{
+        background-size: 11px;
+    }
+
+}
